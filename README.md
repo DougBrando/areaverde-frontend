@@ -21,9 +21,10 @@ Após a conclusão, veio a reflexão: "E se este sistema pudesse ser acessado po
 
 
 **Homepage:**
-
+<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/dfe8e992-9b7f-4219-be89-1e712f5d3d79" />
 
 **Página de Listagem:**
+<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/9fbf828c-a166-46f9-b220-d473af763b57" />
 
 
 ## ✨ Tecnologias Utilizadas
@@ -55,7 +56,7 @@ Para uma experiência completa, você precisará ter o **Backend (API) e o Front
 
 ```bash
 # Clone o repositório da API
-git clone [https://github.com/DougBrando/areaverde-api.git](https://github.com/DougBrando/areaverde-api.git)
+git clone https://github.com/DougBrando/areaverde-api.git
 
 # Navegue até a pasta do projeto
 cd areaverde-api
@@ -69,7 +70,7 @@ cd areaverde-api
 
 ```bash
 # Clone este repositório
-git clone [https://github.com/DougBrando/areaverde-frontend.git](https://github.com/DougBrando/areaverde-frontend.git)
+git clone https://github.com/DougBrando/areaverde-frontend.git
 
 # Navegue até a pasta do projeto
 cd areaverde-frontend
