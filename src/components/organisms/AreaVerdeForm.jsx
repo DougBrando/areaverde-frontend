@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Input from '../atoms/Input';
 import Button from '../atoms/Button';
+import api from '../../services/api';
 
 function AreaVerdeForm() {
   const navigate = useNavigate();
@@ -14,13 +15,13 @@ function AreaVerdeForm() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     setError(null);
     setSuccess(false);
 
     const novaArea = {
-      nome: nome,
+      nome,
       localizacao: {
         latitude: parseFloat(latitude),
         longitude: parseFloat(longitude),
@@ -30,26 +31,14 @@ function AreaVerdeForm() {
       atividadesDisponiveis: atividades.split(',').map(item => item.trim()),
     };
 
-    fetch('http://localhost:8080/areasverdes', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(novaArea),
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Falha ao cadastrar. Verifique os dados.');
-      }
-      return response.json();
-    })
-    .then(data => {
+    try {
+      const response = await api.post('/areasverdes', novaArea); 
       setSuccess(true);
       setTimeout(() => navigate('/areas'), 1500);
-    })
-    .catch(err => {
-      setError(err.message);
-    });
+    } catch (err) {
+      setError('Falha ao cadastrar. Verifique os dados.');
+      console.error(err);
+    }
   }
 
   return (

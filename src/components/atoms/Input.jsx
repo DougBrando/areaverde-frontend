@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Input({ type, value, onChange, placeholder, required = false, step = 'any' }) {
   return (
     <input

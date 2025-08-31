@@ -1,7 +1,12 @@
-import React from 'react';
 import AreaVerdeList from '../components/organisms/AreaVerdeList';
+import { useEffect } from 'react';
 
 function AreaListPage() {
+
+  useEffect(() => {
+    document.title = 'AreaVerde - Todas as Áreas';
+  }, []);
+
   return (
     <div>
       <h2>Todas as Áreas Verdes Cadastradas</h2>

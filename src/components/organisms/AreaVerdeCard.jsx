@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaMapMarkerAlt, FaTree, FaClock, FaClipboardList } from 'react-icons/fa';
 import parkImage from '../../assets/park-placeholder.jpg';
 

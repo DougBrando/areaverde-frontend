@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import AreaVerdeCard from './AreaVerdeCard';
-
+import api from '../../services/api'; 
 function AreaVerdeList() {
   const [areas, setAreas] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8080/areasverdes')
-      .then(response => {
-        if (!response.ok) throw new Error('Falha ao buscar dados da API');
-        return response.json();
-      })
-      .then(data => {
-        setAreas(data);
+    async function fetchAreas() {
+      try {
+        const response = await api.get('/areasverdes'); 
+        setAreas(response.data); 
+      } catch (err) {
+        setError('Falha ao buscar dados da API');
+        console.error(err);
+      } finally {
         setLoading(false);
-      })
-      .catch(error => {
-        setError(error.message);
-        setLoading(false);
-      });
+      }
+    }
+
+    fetchAreas();
   }, []);
 
   if (loading) return <p>Carregando áreas verdes...</p>;

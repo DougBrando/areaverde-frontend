@@ -1,23 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AreaVerdeCard from '../components/organisms/AreaVerdeCard';
+import api from '../services/api'; 
 
 function HomePage() {
   const [recentAreas, setRecentAreas] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8080/areasverdes')
-      .then(res => res.json())
-      .then(data => {
-        const latestThree = data.reverse().slice(0, 3);
+    document.title = 'AreaVerde - Página Inicial';
+  }, []); 
+
+  useEffect(() => {
+    async function fetchRecentAreas() {
+      try {
+        const response = await api.get('/areasverdes'); 
+        const latestThree = response.data.reverse().slice(0, 3);
         setRecentAreas(latestThree);
-        setLoading(false);
-      })
-      .catch(err => {
+      } catch (err) {
         console.error("Erro ao buscar áreas recentes:", err);
+      } finally {
         setLoading(false);
-      });
+      }
+    }
+
+    fetchRecentAreas();
   }, []);
 
   return (
