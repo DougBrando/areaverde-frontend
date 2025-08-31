@@ -2,91 +2,76 @@
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+
+Este repositório contém o **frontend** da aplicação AreaVerde, desenvolvido em React. Para o backend (API), acesse o repositório: **[areaverde-api](https://github.com/DougBrando/areaverde-api.git)**.
 
 ## 📖 Sobre o Projeto
 
-Este projeto é a interface web para o sistema **AreaVerde**, desenvolvido em React. Ele consome uma API REST em Java/Spring para permitir o cadastro e a visualização de áreas verdes, como parques e praças.
+O projeto AreaVerde é uma aplicação full-stack que permite o mapeamento e visualização de espaços verdes urbanos. A interface, construída com React, consome uma API REST para fornecer uma experiência de usuário interativa, limpa e moderna. A arquitetura de componentes segue os princípios do **Atomic Design**, garantindo um código organizado e escalável.
 
-A interface foi construída com foco em uma experiência de usuário limpa e moderna, utilizando a arquitetura **Atomic Design** para a organização de componentes, garantindo escalabilidade e manutenção.
+### A Evolução de uma Ideia
 
-### A História por Trás do Código
+A semente deste projeto foi um **sistema de console em Java**, desenvolvido como um trabalho para a faculdade. O objetivo era simples: aplicar na prática os conceitos de Programação Orientada a Objetos. Você pode conferir o projeto que deu origem a tudo aqui:
 
-O projeto AreaVerde nasceu como um **sistema de console em Java**, desenvolvido para a disciplina de Programação Orientada a Objetos da faculdade. O objetivo original era aplicar conceitos de POO em um contexto prático e com relevância ambiental. Você pode conferir o projeto original aqui:
+* **Repositório Original (Java Console):** [github.com/DougBrando/AreaVerde](https://github.com/DougBrando/AreaVerde)
 
-* **Repositório Original (Java Console):** [github.com/DougBrando/AreaVerde/](https://github.com/DougBrando/AreaVerde/)
+Após a conclusão, veio a reflexão: "E se este sistema pudesse ser acessado por qualquer pessoa, através de um navegador?". A partir dessa ideia, o projeto evoluiu. A lógica de negócio em Java foi transformada em uma poderosa **API REST com Spring Boot**, e esta interface em **React** foi criada do zero para consumir os dados, resultando em uma aplicação web completa e funcional.
 
-Após finalizar a versão console, surgiu a ideia: "E se eu transformasse essa lógica em uma API de verdade para ser consumida por um frontend moderno?". Foi assim que este projeto full-stack nasceu, evoluindo a aplicação Java para uma **API REST com Spring Boot** e construindo esta **interface interativa com React**.
-
-## 📸 Demonstração
-
-[INSERIR AQUI UM GIF DA APLICAÇÃO FUNCIONANDO: NAVEGANDO ENTRE AS PÁGINAS, CADASTRANDO UM NOVO PARQUE E VENDO A LISTA ATUALIZAR]
 
 **Homepage:**
-![Homepage com a seção Hero e o preview dos cards]([INSERIR SCREENSHOT DA HOMEPAGE AQUI])
+
 
 **Página de Listagem:**
-![Página com todos os cards das áreas verdes]([INSERIR SCREENSHOT DA PÁGINA DE LISTAGEM AQUI])
+
 
 ## ✨ Tecnologias Utilizadas
 
-Este é um projeto full-stack. As tecnologias foram divididas entre o Frontend e o Backend.
-
-**Frontend:**
-* **React 18** (com Vite)
-* **React Router DOM** para roteamento
+**Frontend (Este Repositório):**
+* **React 18** (Criado com Vite)
+* **React Router DOM** para roteamento de páginas
+* **Axios** para chamadas à API
 * **React Icons** para a iconografia
 * **CSS Puro** para estilização
-* **Atomic Design** como metodologia de arquitetura de componentes
+* **Atomic Design** como metodologia de arquitetura
 
 **Backend (API):**
 * **Java 17**
 * **Spring Boot 3**
 * **Maven** para gerenciamento de dependências
-* **Jackson** para serialização/desserialização JSON
-* **Persistência** em arquivo JSON local
-
-## 📂 Estrutura de Pastas (Frontend)
-
-O frontend foi organizado utilizando os princípios do **Atomic Design** para promover a reutilização e a clareza dos componentes.
-
-```
-src/
-├── assets/         # Imagens e ícones
-├── components/
-│   ├── atoms/      # Componentes básicos (Button, Input)
-│   └── organisms/  # Componentes complexos (Header, Form, Card)
-├── pages/          # Páginas da aplicação (HomePage, CadastroPage)
-├── templates/      # Layouts de página (Layout principal com header)
-├── App.jsx         # Configuração das rotas
-└── main.jsx        # Ponto de entrada da aplicação
-```
+* **Jackson** para manipulação de JSON
+* **Persistência** de dados em arquivo JSON local
 
 ## 🚀 Como Executar o Projeto
 
-Para rodar este projeto, você precisará ter o **Backend (API) e o Frontend rodando simultaneamente**.
+Para uma experiência completa, você precisará ter o **Backend (API) e o Frontend rodando simultaneamente**.
 
 **Pré-requisitos:**
 * Node.js (v18+)
 * Java (JDK 17+)
-* Maven
 
-**1. Clone e rode o Backend (API):**
+### 1. Backend (API)
+
 ```bash
-# Clone o repositório da API 
-git clone [preencher]
-cd [preencher]
+# Clone o repositório da API
+git clone [https://github.com/DougBrando/areaverde-api.git](https://github.com/DougBrando/areaverde-api.git)
 
-# Rode a aplicação Spring Boot
+# Navegue até a pasta do projeto
+cd areaverde-api
+
+# Rode a aplicação Spring Boot (pode demorar um pouco no primeiro build)
 ./mvnw spring-boot:run
-# A API estará rodando em http://localhost:8080
 ```
+✅ A API estará rodando em `http://localhost:8080`.
 
-**2. Clone e rode o Frontend:**
+### 2. Frontend (Interface Web)
+
 ```bash
 # Clone este repositório
-git clone https://github.com/DougBrando/areaverde-frontend.git
+git clone [https://github.com/DougBrando/areaverde-frontend.git](https://github.com/DougBrando/areaverde-frontend.git)
+
+# Navegue até a pasta do projeto
 cd areaverde-frontend
 
 # Instale as dependências
@@ -94,8 +79,8 @@ npm install
 
 # Rode o servidor de desenvolvimento
 npm run dev
-# A aplicação estará disponível em http://localhost:5173 (ou outra porta indicada)
 ```
+✅ A aplicação estará disponível em `http://localhost:5173` (ou outra porta indicada no terminal).
 
 ## 👨‍💻 Autor
 
