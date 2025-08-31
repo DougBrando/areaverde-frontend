@@ -21,10 +21,12 @@ Após a conclusão, veio a reflexão: "E se este sistema pudesse ser acessado po
 
 
 **Homepage:**
-<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/dfe8e992-9b7f-4219-be89-1e712f5d3d79" />
+<img width="1364" height="630" alt="image" src="https://github.com/user-attachments/assets/426621d4-a406-4c8c-9997-7d17d51cfc0b" />
+
 
 **Página de Listagem:**
-<img width="1366" height="720" alt="image" src="https://github.com/user-attachments/assets/9fbf828c-a166-46f9-b220-d473af763b57" />
+<img width="1363" height="628" alt="image" src="https://github.com/user-attachments/assets/af75b65a-d504-4993-b49f-d99b38126a03" />
+
 
 
 ## ✨ Tecnologias Utilizadas
